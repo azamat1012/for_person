@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        position: absolute;
+        bottom: 0;
+        width: 95%;
+        height: 100%; 
+        z-index: 0;
+        left: 0%;
+    }
+    
+    .main{
+        background-image: url('../media/images/image3.png');
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-left: 20px;
+        
+    }
+
+    .fade-in-button2_{
+        margin-top: 0;
+    
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .fade-in1,
+    .fade-in2{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        position: relative; 
+        padding-top: 70px
+
+    }
+    .yes-button{
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 0 9px green;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bolder;
+        color: yellow;
+        background-color: deepskyblue;
+    }
+    
+</style>
+<body>
+    <div class="main">
+        <div class="content">
+            <p class="fade-in1">В общем!!<br> </p>
+            <p class="fade-in2">Я понимаю, что учеба порою выматывает. Будь моя воля, я бы сделал, все что есть в моих силах, чтобы ты не тратила на нее ни капли своих нервов, ибо оно того не стоит</p>
+            <div class="fade-in-button2">
+                <button class="yes-button" onclick="fourth_function()">----></button>
+            </div>
+        </div>
+    </div>
+    <script src="../media/js/index.js"></script>
+</body>
+</html>

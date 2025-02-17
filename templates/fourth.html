@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{
+        background-color: black;
+
+    }
+    .main {
+        position: absolute;
+        bottom: 0;
+        width: 95%;
+        height: 100%; 
+        z-index: 0;
+        left: 0%;
+    }
+    
+    .fade-in1{
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        color: white;
+    
+    }
+    
+    .fade-in2{
+        opacity: 0;
+        animation: fadeIn 4s forwards;
+        color: white;
+    
+    }
+    .fade-in3{
+        opacity: 0;
+        animation: fadeIn 10s forwards;
+        color: white;
+    
+    }
+    .fade-in4{
+        opacity: 0;
+        animation: fadeIn 15s forwards;
+
+    }
+
+    {% comment %} .fade-in-button2{
+        opacity: 0;
+        animation: fadeIn 30s forwards;
+        color: white;
+     {% endcomment %}
+    }
+
+    
+    .main{
+        background-image: url('../media/images/image4.png');
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        padding-left: 20px;
+    
+        
+    }
+
+    .fade-in-button2_{
+        margin-top: 0;
+    
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .fade-in1,
+    .fade-in2,
+    .fade-in3,
+    .fade-in4{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        position: relative; 
+        padding-top: 30px;
+        color: white;
+
+    }
+    .yes-button {
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 0 9px green;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bolder;
+        color: yellow;
+        background-color: deepskyblue; 
+        padding: 0;
+        overflow: hidden; 
+        position: relative;
+    }
+    
+    .button-image {
+        width: 100%;         
+        height: 100%;       
+        object-fit: cover;
+        position: absolute;   
+        top: 0;                
+        left: 0;               
+        z-index: 1;            
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="content">
+            <p class="fade-in1">Слова - всего лишь слова, поэтому<br> </p>
+            <p class="fade-in2">я создал для тебя небольшого помощника, который будет присылать тебе изменения в расписании)</p>
+            <p class="fade-in3">Ps. Надеюсь, это хоть немного облегчит твою учебу</p>
+            <p class="fade-in4">Держи:</p>
+            <div class="fade-in-button2">
+                <button class="yes-button" onclick="window.location.href='tg://resolve?domain=ects_shift_bot'">
+                    <img src="../media/images/imageBTN.png" alt="Telegram" class="button-image">
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="../media/js/index.js"></script>
+</body>
+</html>
