@@ -7,7 +7,7 @@
 
     <style>
         .main2_ {
-            background-image: url('../media/images/image2.png'); /* Initial background */
+            background-image: url('../media/images/image2.png'); 
             background-size: cover;
             background-repeat: no-repeat;
             position: absolute;
@@ -100,31 +100,28 @@
     </div>
 
     <script>
-        // JavaScript for the letter sequence and display
         let letterContainer = document.getElementById('letter-container');
         let messageContainer = document.getElementById('message-container');
         let buttonContainer = document.getElementById('button-container');
         let w = document.getElementById('w');
         let t = document.getElementById('t');
         let f = document.getElementById('f');
-        let main2 = document.getElementById('main2'); // Get the main2 div
+        let main2 = document.getElementById('main2'); 
         let currentLetter = 0;
         let timeoutId;
-        let initialBackgroundImage = "url('../media/images/image2.png')"; // Store initial background
+        let initialBackgroundImage = "url('../media/images/image2.png')";
 
         function zoomBackground() {
             main2.classList.add('zoomed');
         }
 
         function showLetter() {
-            // Hide everything first.  This is CRUCIAL.
             messageContainer.classList.add('hidden');
             buttonContainer.classList.add('hidden');
             w.classList.add('hidden');
             t.classList.add('hidden');
             f.classList.add('hidden');
 
-            // Remove zoom *before* adding the new letter or changing background.
             main2.classList.remove('zoomed');
 
             switch (currentLetter) {
@@ -141,17 +138,16 @@
                     zoomBackground();
                     break;
                 case 3:
-                    // Change background image
                     main2.style.backgroundImage = "url('../media/images/image.png')";
                     messageContainer.classList.remove('hidden');
 
                     setTimeout(() => {
-                        messageContainer.classList.remove('hidden'); //Ensure message fades in
+                        messageContainer.classList.remove('hidden'); 
                     }, 0);
 
                     setTimeout(() => {
                         buttonContainer.classList.remove('hidden');
-                    }, 1500); // Show button after the message
+                    }, 1500); 
                     break;
             }
 
@@ -160,11 +156,10 @@
             if (currentLetter < 3) {
                 timeoutId = setTimeout(showLetter, 1500);
             } else if (currentLetter === 3) {
-                setTimeout(showLetter, 1500); // Show the message
+                setTimeout(showLetter, 1500);
             }
         }
 
-        // Start the sequence
         showLetter();
 
         function third_function() {
